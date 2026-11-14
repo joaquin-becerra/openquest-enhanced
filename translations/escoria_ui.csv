@@ -1,0 +1,29 @@
+keys,en,es,fr,de,it
+NEW_GAME,New game,Nueva partida,Nouvelle partie,Neues Spiel,Nuova partita
+CONTINUE_GAME,Continue game,Continuar,Continuer la partie,Weiterspielen,Continua
+LOAD_GAME,Load game,Cargar partida,Charger,Spiel laden,Carica partita
+SAVE_GAME,Save game,Guardar partida,Sauvegarder,Spiel speichern,Salva partita
+OPTIONS,Options,Opciones,Options,Einstellungen,Opzioni
+QUIT,Quit,Salir,Quitter,Beenden,Esci
+OPTIONS_BACK,Back,Volver,Retour,Zurück,Indietro
+OPTIONS_LANGUAGE,Language,Idioma,Langue,Sprache,Lingua
+GENERAL_VOLUME,General,General,Général,Allgemein,Generale
+MUSIC_VOLUME,Music,Música,Musique,Musik,Musica
+EFFECTS_VOLUME,Effects,Efectos,Effets,Effekte,Effetti
+SOUND_VOLUME,Sound effects,Efectos de sonido,Effets sonores,Soundeffekte,Effetti sonori
+SPEECH_VOLUME,Speech,Voz,Voix,Sprachausgabe,Voce
+AMBIENT_VOLUME,Ambient,Ambiente,Ambiance,Atmosphäre,Ambiente
+FULLSCREEN,Fullscreen,Pantalla completa,Plein écran,Vollbild,Schermo intero
+CANCEL,Cancel,Cancelar,Annuler,Abbrechen,Annulla
+OK,OK,Ok,Ok,Ok,OK
+ENTER_SAVE_NAME,Enter the save name:,Introduce el nombre de la partida:,Entrez un nom de sauvegarde,Bitte gib einen Namen für das Spiel ein:,Inserisci il nome del salvataggio:
+APPLY,Apply,Aplicar,Appliquer,Anwenden,Applica
+CONFIRM_OVERWRITE,Overwrite the savegame?, ¿Sobreescribir la partida?,Écraser la sauvegarde ?,Soll das Spiel überschrieben werden?,Sovrascrivere il salvataggio?
+YES,Yes,Sí,Oui,Ja,Sì
+NO,No,No,Non,Nein,No
+VOLUME,Volume,Volumen,Volume,Lautstärke,Volume
+GRAPHICS,Graphics,Gráficos,Graphismes,Grafik,Grafica
+GRAPHICS_ORIGINAL,Original,Originales,Originaux,Original,Originale
+GRAPHICS_HD,Enhanced,Avanzados,Améliorés,Verbessert,Migliorata
+SCREEN,Screen,Pantalla,Écran,Bildschirm,Schermo
+SCREEN_WINDOW,Window,Ventana,Fenêtre,Fenster,Finestra

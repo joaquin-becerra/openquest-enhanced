@@ -1,0 +1,17 @@
+:setup
+	set_gui_visible(false)
+	set_active("player", false)
+	ufo_actor_room = "Ending"
+	set_active("ufo_actor", true)
+	teleport_pos("ufo_actor", 640, 320)
+	scumm_restore_names()
+	scumm_fade_in()
+
+:ready
+	accept_input("SKIP")
+	# the ship (with Zif aboard) stays a moment and leaves to the right
+	wait(1.5)
+	walk_to_pos_block("ufo_actor", 1500, 320)
+	# the intro music comes back with the credits
+	play_snd("res://music/intro.ogg", "_music")
+	credits_start = 1

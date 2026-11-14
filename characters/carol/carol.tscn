@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://db7xxjcmmiond"]
+
+[ext_resource type="Texture2D" uid="uid://b6jk5omgdsmwt" path="res://characters/carol/frames/clean_01.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://docubqe1kc4w5" path="res://characters/carol/frames/clean_02.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cvbs1egd6m4f1" path="res://characters/carol/frames/clean_03.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dgppe102h63ot" path="res://characters/carol/frames/walkfrombehindwall_01.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bqw6glfhqdx7b" path="res://characters/carol/frames/walkfrombehindwall_02.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://hw8k3477q5fb" path="res://characters/carol/frames/walkfrombehindwall_03.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cmemjm5oefmos" path="res://characters/carol/frames/walkfrombehindwall_04.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://b6a3nnqj0afv7" path="res://characters/carol/frames/walkfrombehindwall_05.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://boob2vgkbqd7m" path="res://characters/carol/frames/walkfrombehindwall_06.png" id="9"]
+[ext_resource type="Texture2D" path="res://characters/carol/frames/talk_01.png" id="t1"]
+[ext_resource type="Texture2D" path="res://characters/carol/frames/talk_02.png" id="t2"]
+[ext_resource type="Texture2D" path="res://characters/carol/frames/talk_03.png" id="t3"]
+[ext_resource type="Script" uid="uid://dshelmw7y44qg" path="res://addons/escoria-core/game/core-scripts/esc_item.gd" id="10"]
+[ext_resource type="Resource" path="res://characters/carol/carol_animations.tres" id="11"]
+[ext_resource type="Script" uid="uid://85bledusisk1" path="res://addons/escoria-core/game/core-scripts/esc_dialog_location.gd" id="12"]
+[ext_resource type="Script" uid="uid://chu4bvqgwxuts" path="res://addons/escoria-core/game/core-scripts/esc_interaction_location.gd" id="13"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": 1,
+"name": &"clean_down",
+"speed": 4.29
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+"loop": 1,
+"name": &"idle_down",
+"speed": 4.29
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": 0,
+"name": &"init_down",
+"speed": 4.29
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t2")
+}],
+"loop": 1,
+"name": &"speak_down",
+"speed": 4.29
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+"loop": 1,
+"name": &"talk_stop_down",
+"speed": 4.29
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}],
+"loop": 0,
+"name": &"walk_into_room_down",
+"speed": 4.29
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2"]
+size = Vector2(264, 224)
+
+[node name="carol" type="Area2D" unique_id=920535232]
+process_mode = 1
+script = ExtResource("10")
+global_id = "carol"
+esc_script = "res://characters/carol/carol.esc"
+tooltip_name = "indigenous lifeform"
+is_movable = true
+dialog_color = Color(0.8314, 0.698, 0.651, 1)
+default_action = "look"
+actions_requiring_target_object = PackedStringArray()
+interaction_angle = 270
+speed = 240
+animations = ExtResource("11")
+custom_data = {
+"scumm_base_offset_y": -224,
+"scumm_classes": ["Person"]
+}
+animations = ExtResource("11")
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=157342486]
+sprite_frames = SubResource("SpriteFrames_1")
+animation = &"idle_down"
+autoplay = "idle_down"
+centered = false
+offset = Vector2(-160, -224)
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=815863297]
+position = Vector2(-28, -112)
+shape = SubResource("RectangleShape2D_2")
+
+[node name="dialog_position" type="Marker2D" parent="." unique_id=703370037]
+position = Vector2(0, -320)
+script = ExtResource("12")
+
+[node name="approach" type="Marker2D" parent="." unique_id=124881315]
+position = Vector2(120, 0)
+script = ExtResource("13")
+interaction_angle = 270

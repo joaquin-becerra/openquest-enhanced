@@ -1,0 +1,20 @@
+OpenQuest Enhanced
+==================
+
+OpenQuest, by Michael Sheail (2007), its ScummC port, and this remake (its code,
+the converted scripts and the redrawn HD art) are licensed under the
+
+    Creative Commons Attribution 4.0 International License
+    https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt this work for any purpose, as long as you give
+appropriate credit, link to the license and indicate if changes were made.
+
+Credits: OpenQuest by Michael Sheail; ScummC port by the ScummC team; Godot +
+Escoria version, enhancements and HD art by Joaquin A. Becerra.
+
+Other components keep their own licenses:
+
+- Escoria (addons/escoria-*): MIT, https://github.com/godot-escoria
+- Fonts Bangers, Nunito and Patrick Hand (hd/fonts/): SIL Open Font License 1.1,
+  license texts in hd/fonts/*-OFL.txt

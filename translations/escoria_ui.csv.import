@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cja5vq1ji4p7f"
+
+[deps]
+
+files=["res://translations/escoria_ui.en.translation", "res://translations/escoria_ui.es.translation", "res://translations/escoria_ui.fr.translation", "res://translations/escoria_ui.de.translation", "res://translations/escoria_ui.it.translation"]
+
+source_file="res://translations/escoria_ui.csv"
+dest_files=["res://translations/escoria_ui.en.translation", "res://translations/escoria_ui.es.translation", "res://translations/escoria_ui.fr.translation", "res://translations/escoria_ui.de.translation", "res://translations/escoria_ui.it.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,0 +1,11 @@
+# Godot
+.godot/
+/build/
+/android/
+
+# Development material, not part of the game
+/tools/
+/ai_refs/
+/nbproject/
+/vector/
+__pycache__/

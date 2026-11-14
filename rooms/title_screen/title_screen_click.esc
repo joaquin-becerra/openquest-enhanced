@@ -1,0 +1,5 @@
+:exit_scene
+	show_loading()
+	scumm_screen_effect(34695)
+	scumm_fade_out()
+	change_scene("res://rooms/skyline/skyline.tscn")

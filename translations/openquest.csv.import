@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://di84vwao2lcdr"
+
+[deps]
+
+files=["res://translations/openquest.en.translation", "res://translations/openquest.es.translation", "res://translations/openquest.fr.translation", "res://translations/openquest.de.translation", "res://translations/openquest.it.translation"]
+
+source_file="res://translations/openquest.csv"
+dest_files=["res://translations/openquest.en.translation", "res://translations/openquest.es.translation", "res://translations/openquest.fr.translation", "res://translations/openquest.de.translation", "res://translations/openquest.it.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

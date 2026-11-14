@@ -1,0 +1,159 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/menus/openquest_menu.gd" id="script"]
+[ext_resource type="Theme" path="res://ui/theme_gui.tres" id="theme"]
+[ext_resource type="Texture2D" path="res://rooms/skyline/background.png" id="sky"]
+[ext_resource type="Texture2D" path="res://rooms/title_screen/title_logo.png" id="logo"]
+[ext_resource type="Texture2D" path="res://ui/menus/menu_button.png" id="button"]
+[ext_resource type="FontFile" path="res://fonts/verb_chset.fnt" id="font"]
+[ext_resource type="PackedScene" path="res://ui/menus/openquest_options.tscn" id="options"]
+
+[sub_resource type="StyleBoxTexture" id="box"]
+texture = ExtResource("button")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="box_hover"]
+texture = ExtResource("button")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(1.15, 1.15, 1.15, 1)
+
+[sub_resource type="StyleBoxEmpty" id="empty"]
+
+[node name="openquest_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("theme")
+script = ExtResource("script")
+
+[node name="ground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 560.0
+offset_right = 1280.0
+offset_bottom = 800.0
+mouse_filter = 2
+color = Color(0.4196, 0.5098, 0.5961, 1)
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 576.0
+mouse_filter = 2
+texture = ExtResource("sky")
+
+[node name="main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="logo" type="TextureRect" parent="main"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 6.0
+offset_right = 928.0
+offset_bottom = 334.0
+mouse_filter = 2
+texture = ExtResource("logo")
+
+[node name="buttons" type="VBoxContainer" parent="main"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 360.0
+offset_right = 840.0
+offset_bottom = 760.0
+theme_override_constants/separation = 16
+
+[node name="continue" type="Button" parent="main/buttons"]
+custom_minimum_size = Vector2(400, 72)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.8863, 0.8745, 0.8627, 1)
+theme_override_colors/font_focus_color = Color(0.8863, 0.8745, 0.8627, 1)
+theme_override_colors/font_hover_color = Color(0, 0.251, 0.502, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.251, 0.502, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.251, 0.502, 1)
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("box")
+theme_override_styles/hover = SubResource("box_hover")
+theme_override_styles/pressed = SubResource("box_hover")
+theme_override_styles/hover_pressed = SubResource("box_hover")
+theme_override_styles/focus = SubResource("empty")
+text = "CONTINUE_GAME"
+
+[node name="new_game" type="Button" parent="main/buttons"]
+custom_minimum_size = Vector2(400, 72)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.8863, 0.8745, 0.8627, 1)
+theme_override_colors/font_focus_color = Color(0.8863, 0.8745, 0.8627, 1)
+theme_override_colors/font_hover_color = Color(0, 0.251, 0.502, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.251, 0.502, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.251, 0.502, 1)
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("box")
+theme_override_styles/hover = SubResource("box_hover")
+theme_override_styles/pressed = SubResource("box_hover")
+theme_override_styles/hover_pressed = SubResource("box_hover")
+theme_override_styles/focus = SubResource("empty")
+text = "NEW_GAME"
+
+[node name="options" type="Button" parent="main/buttons"]
+custom_minimum_size = Vector2(400, 72)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.8863, 0.8745, 0.8627, 1)
+theme_override_colors/font_focus_color = Color(0.8863, 0.8745, 0.8627, 1)
+theme_override_colors/font_hover_color = Color(0, 0.251, 0.502, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.251, 0.502, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.251, 0.502, 1)
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("box")
+theme_override_styles/hover = SubResource("box_hover")
+theme_override_styles/pressed = SubResource("box_hover")
+theme_override_styles/hover_pressed = SubResource("box_hover")
+theme_override_styles/focus = SubResource("empty")
+text = "OPTIONS"
+
+[node name="quit" type="Button" parent="main/buttons"]
+custom_minimum_size = Vector2(400, 72)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.8863, 0.8745, 0.8627, 1)
+theme_override_colors/font_focus_color = Color(0.8863, 0.8745, 0.8627, 1)
+theme_override_colors/font_hover_color = Color(0, 0.251, 0.502, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.251, 0.502, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.251, 0.502, 1)
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("box")
+theme_override_styles/hover = SubResource("box_hover")
+theme_override_styles/pressed = SubResource("box_hover")
+theme_override_styles/hover_pressed = SubResource("box_hover")
+theme_override_styles/focus = SubResource("empty")
+text = "QUIT"
+
+[node name="options" parent="." instance=ExtResource("options")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="main/buttons/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="main/buttons/new_game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="main/buttons/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="main/buttons/quit" to="." method="_on_quit_pressed"]
+[connection signal="back_button_pressed" from="options" to="." method="_on_options_back_button_pressed"]
