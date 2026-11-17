@@ -32,6 +32,7 @@
 		wait(0.17)
 		set_state("exit_to_secret_room", "state_7")
 		exit_to_secret_room_state = 7
+		enable_terrain("door_open")
 		scumm_sound("res://sounds/opened_door_snd.wav")
 		scumm_anim("player", "lower_arm")
 		scumm_anim("commander_zif", "lower_arm")
@@ -102,6 +103,7 @@
 		wait(0.17)
 		set_state("exit_to_secret_room", "state_7")
 		exit_to_secret_room_state = 7
+		enable_terrain("door_open")
 		scumm_sound("res://sounds/opened_door_snd.wav")
 		scumm_anim("player", "lower_arm")
 		scumm_anim("commander_zif", "lower_arm")

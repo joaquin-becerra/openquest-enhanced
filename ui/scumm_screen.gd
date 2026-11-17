@@ -24,8 +24,7 @@ const SCROLLS := {
 	132: [Vector2(0, 1), 0.3, 18],
 	133: [Vector2(0, -1), 0.3, 18],
 }
-const SIZE := Vector2(1280, 576)
-const VIEW_HEIGHT := 800.0
+const SIZE := Vector2(1280, 576)  # the room area (top of the view)
 
 const SHADER := """
 shader_type canvas_item;
@@ -86,7 +85,6 @@ func _init() -> void:
 	shader.code = SHADER
 	_material = ShaderMaterial.new()
 	_material.shader = shader
-	_material.set_shader_parameter("area", SIZE.y / VIEW_HEIGHT)
 	_rect = ColorRect.new()
 	_rect.size = SIZE
 	_rect.material = _material
@@ -95,16 +93,27 @@ func _init() -> void:
 	add_child(_rect)
 
 
+## Fits the overlay to the view as it is now: the room area is the top
+## SIZE.y of the view, which may be wider or shorter than the 1280x800 design
+## (e.g. a phone layout where the room fills the screen).
+func _fit() -> void:
+	var view := get_viewport().get_visible_rect().size
+	_rect.size = Vector2(view.x, SIZE.y)
+	_material.set_shader_parameter("area", SIZE.y / view.y)
+
+
 ## Leaving a room: keep the current picture, then play the "out" effect.
 func fade_out(from_black: bool = false) -> void:
 	var effect := (effect_code() >> 8) & 0xFF
 	_reset()
+	_fit()
 	if from_black:
 		_material.set_shader_parameter("old_black", true)
 	else:
 		await RenderingServer.frame_post_draw
 		var image := get_viewport().get_texture().get_image()
-		var area := Rect2i(Vector2i.ZERO, Vector2i(image.get_width(), int(image.get_height() * SIZE.y / VIEW_HEIGHT)))
+		var view_h := get_viewport().get_visible_rect().size.y
+		var area := Rect2i(Vector2i.ZERO, Vector2i(image.get_width(), int(image.get_height() * SIZE.y / view_h)))
 		_material.set_shader_parameter("old_picture", ImageTexture.create_from_image(image.get_region(area)))
 	_rect.visible = true
 	if _effect_flag and effect != 0 and not from_black:
@@ -118,6 +127,13 @@ func fade_out(from_black: bool = false) -> void:
 			_material.set_shader_parameter("new_black", false)
 			_material.set_shader_parameter("progress", 0.0)
 	_effect_flag = false
+	# change_scene runs right after this and loads the new room synchronously,
+	# freezing the page: draw the finished effect first, or the last frame on
+	# screen is a half-done dissolve (dots of the old room left for seconds).
+	# Two frames: on the web a frame is only shown when the browser's
+	# animation frame returns, and the load would start inside the same one.
+	for i in 2:
+		await RenderingServer.frame_post_draw
 
 
 ## Entering a room: reveal it with the "in" effect (doesn't block).
@@ -125,6 +141,7 @@ func fade_in() -> void:
 	_effect_flag = true
 	if not _rect.visible:
 		return
+	_fit()
 	var effect := effect_code() & 0xFF
 	if EFFECTS.has(effect):
 		_material.set_shader_parameter("mask", load(EFFECTS[effect][0]))

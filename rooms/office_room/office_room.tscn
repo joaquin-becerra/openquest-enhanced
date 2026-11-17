@@ -87,10 +87,16 @@
 [ext_resource type="PackedScene" path="res://characters/commander_zif/commander_zif.tscn" id="85"]
 [ext_resource type="PackedScene" path="res://characters/carol/carol.tscn" id="86"]
 [ext_resource type="Texture2D" path="res://rooms/office_room/carol_wall.png" id="carol_wall"]
+[ext_resource type="Texture2D" path="res://rooms/office_room/objects/cabinet_drawer_0_plane2_edge.png" id="drawer_edge_0"]
+[ext_resource type="Texture2D" path="res://rooms/office_room/objects/cabinet_drawer_1_plane2_edge.png" id="drawer_edge_1"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1"]
-vertices = PackedVector2Array(224, 420, 512, 420, 644, 420, 1020, 420, 1020, 424, 1020, 448, 1020, 524, 92, 524, 256, 396, 400, 396, 440, 396, 512, 396, 644, 396, 972, 392, 420, 384, 432, 384, 336, 316, 504, 324, 484, 360, 444, 360, 420, 360, 280, 360, 1072, 448, 1144, 524, 1196, 424, 1196, 448)
+vertices = PackedVector2Array(224, 420, 512, 420, 644, 420, 1020, 420, 1020, 424, 1020, 448, 1020, 504, 117, 504, 256, 396, 400, 396, 440, 396, 512, 396, 644, 396, 972, 392, 420, 384, 432, 384, 336, 316, 504, 324, 484, 360, 444, 360, 420, 360, 280, 360, 1072, 448, 1125, 504, 1196, 424, 1196, 448)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11, 1, 0), PackedInt32Array(12, 13, 3, 2), PackedInt32Array(14, 15, 10, 9), PackedInt32Array(16, 17, 18, 19, 20, 21), PackedInt32Array(5, 22, 23, 6), PackedInt32Array(20, 19, 15, 14), PackedInt32Array(4, 24, 25, 22, 5)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_closed"]
+vertices = PackedVector2Array(224, 420, 512, 420, 644, 420, 1020, 420, 1020, 424, 1020, 448, 1020, 504, 117, 504, 256, 396, 400, 396, 440, 396, 512, 396, 644, 396, 972, 392, 420, 384, 432, 384, 336, 316, 504, 324, 484, 360, 444, 360, 420, 360, 280, 360, 1072, 448, 1125, 504, 1196, 424, 1196, 448)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11, 1, 0), PackedInt32Array(12, 13, 3, 2), PackedInt32Array(14, 15, 10, 9), PackedInt32Array(16, 17, 18, 19, 20, 21), PackedInt32Array(5, 22, 23, 6), PackedInt32Array(20, 19, 15, 14)])
 
 [sub_resource type="Animation" id="Animation_2"]
 resource_name = "state_0"
@@ -1481,7 +1487,11 @@ centered = false
 [node name="walkable_area" type="Node2D" parent="."]
 script = ExtResource("4")
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="walkable_area"]
+[node name="door_closed" type="NavigationRegion2D" parent="walkable_area"]
+navigation_polygon = SubResource("NavigationPolygon_closed")
+
+[node name="door_open" type="NavigationRegion2D" parent="walkable_area"]
+enabled = false
 navigation_polygon = SubResource("NavigationPolygon_1")
 
 [node name="zplanes" type="Node2D" parent="."]
@@ -2189,6 +2199,13 @@ position = Vector2(24, 0)
 texture = ExtResource("81")
 centered = false
 
+[node name="plane2_edge" type="Sprite2D" parent="objects/cabinet_drawer/occluders_0"]
+z_index = 398
+z_as_relative = false
+position = Vector2(-24, 0)
+texture = ExtResource("drawer_edge_0")
+centered = false
+
 [node name="occluders_1" type="Node2D" parent="objects/cabinet_drawer"]
 visible = false
 
@@ -2211,6 +2228,13 @@ z_index = 362
 z_as_relative = false
 position = Vector2(24, 0)
 texture = ExtResource("84")
+centered = false
+
+[node name="plane2_edge" type="Sprite2D" parent="objects/cabinet_drawer/occluders_1"]
+z_index = 398
+z_as_relative = false
+position = Vector2(-24, 0)
+texture = ExtResource("drawer_edge_1")
 centered = false
 
 [node name="animation_player" type="AnimationPlayer" parent="objects/cabinet_drawer"]

@@ -25,6 +25,7 @@ buses/default_bus_layout="res://addons/escoria-core/buses/default_bus_layout.tre
 
 [autoload]
 
+EscoriaMobile="*res://addons/escoria-mobile/mobile_input.gd"
 escoria="*uid://dcskv8vx80gov"
 first_run_locale="*res://ui/first_run_locale.gd"
 hd_graphics="*res://graphics/hd_graphics.gd"
@@ -43,10 +44,13 @@ search_in_file_extensions=PackedStringArray("gd", "shader", "esc")
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/escoria-core/plugin.cfg", "res://addons/escoria-dialog-simple/plugin.cfg", "res://addons/escoria-ui-keyboard-9verbs/plugin.cfg")
+enabled=PackedStringArray("res://addons/escoria-core/plugin.cfg", "res://addons/escoria-dialog-simple/plugin.cfg", "res://addons/escoria-ui-keyboard-9verbs/plugin.cfg", "res://addons/escoria-mobile/plugin.cfg")
 
 [escoria]
 
+mobile/hud_hint_names=false
+mobile/layout/room_height=576
+mobile/layout/bottom_panel="ui/Control/panel_down"
 main/game_version="0.1.0"
 main/game_start_script="res://start_game.esc"
 main/force_quit=true

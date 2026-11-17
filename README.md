@@ -27,6 +27,11 @@ The web version runs on [GEJE](https://github.com/joaquin-becerra/godot-escoria-
 - **New menus**: the main and pause menu use the game's own look (intro background, logo, verb-box buttons). Options include language, volumes, graphics and screen mode.
 - **Credits at the end of the game**: Zif beams up to the ship, the ship leaves and the credits roll.
 - **Animated title screen**: Zif talks on the phone and Zob sweeps his detector.
+- **Phones and tablets** (new in 1.1), with the [Escoria Mobile](https://github.com/joaquin-becerra/escoria-mobile-addon) addon, in Godot and in the browser:
+  - touch gestures: tap an item to see it, tap again to act; double tap to run; long press for a right click;
+  - the room fills the screen and the verb panel becomes a drawer: tap an object, then a verb;
+  - buttons for the settings and for highlighting the room's items;
+  - on the web, fullscreen and landscape with the first touch.
 - **Quality of life**:
   - a loading indicator between rooms;
   - an always-visible fullscreen button, which also works on the web;
@@ -49,6 +54,7 @@ To play in the browser:
 | `characters/`, `items/` | Characters and inventory items with their ESC scripts |
 | `hd/` | HD versions of the graphics, mirroring the paths of the originals |
 | `graphics/hd_graphics.gd` | Switches between original and HD graphics and fonts |
+| `addons/escoria-mobile/` | [Escoria Mobile](https://github.com/joaquin-becerra/escoria-mobile-addon): touch, phone layout and HUD (settings under `escoria/mobile/` in `project.godot`) |
 | `ui/` | SCUMM-style UI (verbs, sentence line, speech, dialog chooser, transitions), menus, options |
 | `commands/` | Custom ESC commands (`scumm_*` from the converter, `show_loading`…) |
 | `translations/` | `openquest.csv` (game texts) and `escoria_ui.csv` (menus) |

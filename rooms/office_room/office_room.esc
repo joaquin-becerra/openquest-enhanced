@@ -16,6 +16,10 @@
 		set_active("carol", true)
 	else:
 		set_active("carol", false)
+	if exit_to_secret_room_state == 7:
+		enable_terrain("door_open")
+	else:
+		enable_terrain("door_closed")
 	scumm_restore_names()
 	scumm_roam("", "setup")
 	scumm_fade_in()
