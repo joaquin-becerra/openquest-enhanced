@@ -12,6 +12,7 @@ const LANGUAGE_NAMES := {
 	"fr": "Français",
 	"de": "Deutsch",
 	"it": "Italiano",
+	"pt": "Português",
 }
 
 ## Played when moving the effects volume (Zif's phone beep).

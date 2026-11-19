@@ -122,7 +122,7 @@ esc_change_verb={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translations/openquest.en.translation", "res://translations/openquest.es.translation", "res://translations/openquest.fr.translation", "res://translations/openquest.de.translation", "res://translations/openquest.it.translation", "res://translations/escoria_ui.en.translation", "res://translations/escoria_ui.es.translation", "res://translations/escoria_ui.fr.translation", "res://translations/escoria_ui.de.translation", "res://translations/escoria_ui.it.translation")
+locale/translations=PackedStringArray("res://translations/openquest.en.translation", "res://translations/openquest.es.translation", "res://translations/openquest.fr.translation", "res://translations/openquest.de.translation", "res://translations/openquest.it.translation", "res://translations/openquest.pt.translation", "res://translations/escoria_ui.en.translation", "res://translations/escoria_ui.es.translation", "res://translations/escoria_ui.fr.translation", "res://translations/escoria_ui.de.translation", "res://translations/escoria_ui.it.translation", "res://translations/escoria_ui.pt.translation")
 
 [rendering]
 

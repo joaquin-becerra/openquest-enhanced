@@ -20,7 +20,7 @@ The web version runs on [GEJE](https://github.com/joaquin-becerra/godot-escoria-
   - The HD character frames were redrawn with AI (Gemini) from the originals and cleaned up; Zif and Zob were also vectorized.
   - Positions, collisions and scripts are the same in both modes.
 - **HD fonts**: Bangers, Nunito and Patrick Hand (all OFL) replace the bitmap fonts in HD mode.
-- **5 languages**: English, Spanish, French, German and Italian.
+- **6 languages**: English, Spanish, French, German, Italian and Portuguese.
   - On the first run the game picks the system or browser language.
   - Accented letters were added to the original bitmap fonts.
 - **Music**: the four themes of the AGS version, plus separate music and effects volumes.

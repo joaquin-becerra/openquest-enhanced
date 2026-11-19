@@ -6,10 +6,10 @@ uid="uid://di84vwao2lcdr"
 
 [deps]
 
-files=["res://translations/openquest.en.translation", "res://translations/openquest.es.translation", "res://translations/openquest.fr.translation", "res://translations/openquest.de.translation", "res://translations/openquest.it.translation"]
+files=["res://translations/openquest.en.translation", "res://translations/openquest.es.translation", "res://translations/openquest.fr.translation", "res://translations/openquest.de.translation", "res://translations/openquest.it.translation", "res://translations/openquest.pt.translation"]
 
 source_file="res://translations/openquest.csv"
-dest_files=["res://translations/openquest.en.translation", "res://translations/openquest.es.translation", "res://translations/openquest.fr.translation", "res://translations/openquest.de.translation", "res://translations/openquest.it.translation"]
+dest_files=["res://translations/openquest.en.translation", "res://translations/openquest.es.translation", "res://translations/openquest.fr.translation", "res://translations/openquest.de.translation", "res://translations/openquest.it.translation", "res://translations/openquest.pt.translation"]
 
 [params]
 

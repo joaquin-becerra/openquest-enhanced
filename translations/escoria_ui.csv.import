@@ -6,10 +6,10 @@ uid="uid://cja5vq1ji4p7f"
 
 [deps]
 
-files=["res://translations/escoria_ui.en.translation", "res://translations/escoria_ui.es.translation", "res://translations/escoria_ui.fr.translation", "res://translations/escoria_ui.de.translation", "res://translations/escoria_ui.it.translation"]
+files=["res://translations/escoria_ui.en.translation", "res://translations/escoria_ui.es.translation", "res://translations/escoria_ui.fr.translation", "res://translations/escoria_ui.de.translation", "res://translations/escoria_ui.it.translation", "res://translations/escoria_ui.pt.translation"]
 
 source_file="res://translations/escoria_ui.csv"
-dest_files=["res://translations/escoria_ui.en.translation", "res://translations/escoria_ui.es.translation", "res://translations/escoria_ui.fr.translation", "res://translations/escoria_ui.de.translation", "res://translations/escoria_ui.it.translation"]
+dest_files=["res://translations/escoria_ui.en.translation", "res://translations/escoria_ui.es.translation", "res://translations/escoria_ui.fr.translation", "res://translations/escoria_ui.de.translation", "res://translations/escoria_ui.it.translation", "res://translations/escoria_ui.pt.translation"]
 
 [params]
 

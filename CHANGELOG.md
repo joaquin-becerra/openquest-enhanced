@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- **Portuguese** translation (game texts and menus). The four bitmap fonts get the composed letters ã, õ, Ã and Õ.
+
 ## 1.1 — 2026-11-16
 
 Playable on phones and tablets, in Godot and in the browser.
